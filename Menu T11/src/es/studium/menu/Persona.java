@@ -10,34 +10,26 @@ import java.util.Locale;
 
 public class Persona implements Comparable {
 	private String nombre; 
-	private String apellidos;
-	private String dni; 
-	private Date fechaNacimiento; 
+	private String telefono;
+	private String correo; 
 	public String toString() {
-		return this.apellidos + " " + this.nombre + " " + this.dni + " " + DateFormat.getDateInstance(DateFormat.DEFAULT, Locale.getDefault()).format(this.fechaNacimiento);
+		return this.telefono + " " + this.nombre + " " + this.correo;
 	}
-	public Persona(String nombre, String apellidos, String dni, Date fechaNacimiento) {
+	public Persona(String nombre, String apellidos, String dni) {
 		this.nombre = nombre;
-		this.apellidos = apellidos;
-		this.dni = dni;
-		this.fechaNacimiento = fechaNacimiento;
+		this.telefono = apellidos;
+		this.correo = dni;
 	} public String getApellidos() { 
-		return apellidos; 
+		return telefono; 
 	}
 	public void setApellidos(String apellidos) {
-		this.apellidos = apellidos;
+		this.telefono = apellidos;
 	} 
 	public String getDni() { 
-		return dni;
+		return correo;
 	} 
 	public void setDni(String dni) {
-		this.dni = dni; 
-	} 
-	public Date getFechaNacimiento() {
-		return fechaNacimiento; 
-	} 
-	public void setFechaNacimiento(Date fechaNacimiento) {
-		this.fechaNacimiento = fechaNacimiento; 
+		this.correo = dni; 
 	} 
 	public String getNombre(){ return nombre;
 	} 
@@ -46,14 +38,14 @@ public class Persona implements Comparable {
 	} 
 	public int compareTo(Object o) {
 		Persona persona = (Persona)o;
-		if(this.apellidos.compareToIgnoreCase(persona.apellidos) == 0) {
+		if(this.telefono.compareToIgnoreCase(persona.telefono) == 0) {
 			if(this.nombre.compareToIgnoreCase(persona.nombre) == 0) {
-				return this.dni.compareTo(persona.dni);
+				return this.correo.compareTo(persona.correo);
 			}else {
 				return this.nombre.compareToIgnoreCase(persona.nombre); 
 			} 
 		} else {
-			return this.apellidos.compareToIgnoreCase(persona.apellidos); 
+			return this.telefono.compareToIgnoreCase(persona.telefono); 
 		}
 	}
 }

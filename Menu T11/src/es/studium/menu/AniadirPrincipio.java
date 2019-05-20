@@ -23,7 +23,7 @@ public class AniadirPrincipio extends JFrame implements WindowListener, ActionLi
 	JTextField txtNombre = new JTextField(10);
 	JLabel lblTel = new JLabel("Teléfono:");
 	JTextField txtTel= new JTextField(10);
-	JLabel lblCorreo=new JLabel("Segundo apellido:");
+	JLabel lblCorreo=new JLabel("Correo:");
 	JTextField txtCorreo=new JTextField(10);
 	JButton btnAcept = new JButton("Aceptar");
 	JButton btnCancelar = new JButton("Cancelar");
